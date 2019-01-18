@@ -22,7 +22,7 @@ gulp.task('server', function() {
         server: 'source/'
     });
 
-    gulp.watch("source/sass/style.scss", gulp.series("css")).on('change', server.reload);
+    gulp.watch("source/sass/**/*.scss", gulp.series("css")).on('change', server.reload);
     gulp.watch('source/index.html').on('change', server.reload);
 });
 
